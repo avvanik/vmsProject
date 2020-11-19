@@ -60,9 +60,9 @@ public class Scores {
 	public void clearResultList() {
 			ResultList.clear();
 	}
-
-	public void addValueToResultList(ArrayList<Integer> List, Integer value) {
-		((ArrayList<Integer>) List).add(value);	
+	
+	public void addValueToResultList(Integer value) {
+		ResultList.add(value);
 	}
 
 }

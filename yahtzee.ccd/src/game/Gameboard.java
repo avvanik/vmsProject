@@ -109,14 +109,14 @@ public class Gameboard {
 	private void handlePoints(Button button, int points, TextField field, ArrayList<Integer> resultlist) {
 		button.setDisable(true);
 		field.setText(" " + points);
-		yScores.addValueToResultList(resultlist, points);
+		yScores.addValueToResultList(points);
 		yView.rollButton.setDisable(false);
 	}
 
 	public void handleNextRound() {
 
 		resetBoxes();
-		resetLabel();
+		resetLabels();
 		yDiceCup.resetDices();
 		yDiceCup.resetRounds();
 
@@ -124,24 +124,21 @@ public class Gameboard {
 
 	public void playAgain() {
 		yView.initializeControls();
-
 		yView.rollButton.setDisable(false);
-
 		yDiceCup.resetRounds();
 		yScores.resetPoints();
 		yScores.clearResultList();
-		
 		resetButtons();
-		resetField();
-		resetLabel();
+		resetFields();
+		resetLabels();
 		resetBoxes();
 		yDiceCup.resetDices();
 
 	}
 	
-	public void resetLabel() {
+	public void resetLabels() {
 		for (int i = 0; i < yView.pointlabels.length; i++) {
-			yView.pointlabels[i].setText(" ");
+			yView.pointlabels[i].setText(" "); 
 		}
 		for (int i = 0; i < yView.dicelabels.length; i++) {
 			yView.dicelabels[i].setText(" ");
@@ -149,7 +146,7 @@ public class Gameboard {
 		}
 	}
 
-	public void resetField() {
+	public void resetFields() {
 		for (int i = 0; i < yView.pointsfields.length; i++) { 
 			yView.pointsfields[i].setText(" ");
 		}

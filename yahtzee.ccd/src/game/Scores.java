@@ -3,8 +3,6 @@ package game;
 import java.util.ArrayList;
 
 import gui.View;
-import javafx.scene.control.CheckBox;
-
 
 public class Scores {
 
@@ -55,21 +53,20 @@ public class Scores {
 		return total;
 	}
 
-	public void resetPoints() {
-		ones=0;
-		fives=0;
-		sixes=0;
-		chance=0;
-		total=0;
-		
-	}
-
 	public void clearResultList() {
 			ResultList.clear();
 	}
 	
 	public void addValueToResultList(Integer value) {
 		ResultList.add(value);
+	}
+	
+	public void resetPoints() {
+		ones=0;
+		fives=0;
+		sixes=0;
+		chance=0;
+		total=0;	
 	}
 
 }

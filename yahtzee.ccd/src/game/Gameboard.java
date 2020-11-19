@@ -20,11 +20,10 @@ public class Gameboard {
 	Scores yScores = new Scores();
 
 	public void roll() {
-
 		yView.initializeControls();
-		yDiceCup.incRounds();
+		yDiceCup.incRounds();	
 		resetButtons();
-
+		
 		switch (yDiceCup.getRounds()) {
 		case 0:
 			yDiceCup.rollAll();
@@ -46,12 +45,10 @@ public class Gameboard {
 			yDiceCup.resetRounds();
 			break;
 		}
-
 	}
 
 	public void takePoints(ActionEvent event) {
 		handleNextRound();
-
 		if (event.getSource() == yView.onesButton) {
 			handlePoints(yView.onesButton, yScores.ones, yView.onesField, yScores.ResultList);
 		}
@@ -67,15 +64,13 @@ public class Gameboard {
 			handlePoints(yView.chanceButton, yScores.chance, yView.chanceField, yScores.ResultList);
 
 		}
-
 		if (event.getSource() == yView.totalButton) {
 			yView.rollButton.setDisable(true);
 			yView.totalField.setText(" " + yScores.calculateTotal());
 			yScores.clearResultList();
 		}
-
 	}
-
+	
 	public void setDiceColumn() {
 
 		for (int i = 0; i < yView.dicelabels.length; i++) {
@@ -89,12 +84,6 @@ public class Gameboard {
 			yScores.initializePoints();
 			yView.pointlabels[i].setText(" " + yScores.points[i]);
 		}
-
-//		yView.onesLabel.setText(" " + yScores.ones);
-//		yView.fivesLabel.setText(" " + yScores.fives);
-//		yView.sixesLabel.setText(" " + yScores.sixes);
-//		yView.chanceLabel.setText(" " + yScores.chance);
-
 	}
 
 	public void pickDice() {
@@ -119,15 +108,13 @@ public class Gameboard {
 	}
 
 	public void handleNextRound() {
-
 		resetBoxes();
 		resetLabels();
 		yDiceCup.resetDices();
 		yDiceCup.resetRounds();
-
 	}
 
-	public void playAgain() {
+	public void playAgain() {	
 		yView.initializeControls();
 		yView.rollButton.setDisable(false);
 		yDiceCup.resetRounds();
@@ -138,7 +125,6 @@ public class Gameboard {
 		resetLabels();
 		resetBoxes();
 		yDiceCup.resetDices();
-
 	}
 
 	public void resetLabels() {

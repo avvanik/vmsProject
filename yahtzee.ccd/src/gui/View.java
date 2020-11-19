@@ -43,11 +43,11 @@ public class View extends Application {
     public Label sixesLabel;
     public Label chanceLabel;
     
-    public CheckBox[] checkboxes = new CheckBox[5];
-    public TextField[] pointsfields = new TextField[10];
-    public Button[] pointbuttons = new Button[5];
-	public Label[] dicelabels = new Label[5];
-	public Label[] pointlabels = new Label[4];
+    public CheckBox[] checkboxes = new CheckBox[4];
+    public TextField[] pointsfields = new TextField[4];
+    public Button[] pointbuttons = new Button[4];
+	public Label[] dicelabels = new Label[4];
+	public Label[] pointlabels = new Label[3];
 	
     public void initializeControls() {
     	checkboxes = new CheckBox[] {scoreOneBox, scoreTwoBox, scoreThreeBox, scoreFourBox, scoreFiveBox};

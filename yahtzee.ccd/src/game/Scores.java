@@ -3,6 +3,7 @@ package game;
 import java.util.ArrayList;
 
 import gui.View;
+import javafx.scene.control.CheckBox;
 
 
 public class Scores {
@@ -14,7 +15,13 @@ public class Scores {
 	public int fives = 0;
 	public int sixes = 0;
 	public int chance = 0;
-
+	
+	public int[] points = new int[3];
+	
+	public void initializePoints() {
+		points = new int[] {ones, fives, sixes, chance};
+	}
+	
 	public void calculatePoints(Dice[] dices) {
 		for (int i = 0; i < dices.length; i++) {
 			if (dices[i].getValue() == 1) {

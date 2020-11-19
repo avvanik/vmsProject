@@ -84,11 +84,16 @@ public class Gameboard {
 
 		yScores.resetPoints();
 		yScores.calculatePoints(yDiceCup.dices);
-		
-		yView.onesLabel.setText(" " + yScores.ones);
-		yView.fivesLabel.setText(" " + yScores.fives);
-		yView.sixesLabel.setText(" " + yScores.sixes);
-		yView.chanceLabel.setText(" " + yScores.chance);
+
+		for (int i = 0; i < yView.pointlabels.length; i++) {
+			yScores.initializePoints();
+			yView.pointlabels[i].setText(" " + yScores.points[i]);
+		}
+
+//		yView.onesLabel.setText(" " + yScores.ones);
+//		yView.fivesLabel.setText(" " + yScores.fives);
+//		yView.sixesLabel.setText(" " + yScores.sixes);
+//		yView.chanceLabel.setText(" " + yScores.chance);
 
 	}
 
@@ -106,9 +111,9 @@ public class Gameboard {
 
 	}
 
-	private void handlePoints(Button button, int points, TextField field, ArrayList<Integer> resultlist) {
-		button.setDisable(true);
-		field.setText(" " + points);
+	private void handlePoints(Button pointbuttons, int points, TextField pointsfields, ArrayList<Integer> resultlist) {
+		pointbuttons.setDisable(true);
+		pointsfields.setText(" " + points);
 		yScores.addValueToResultList(points);
 		yView.rollButton.setDisable(false);
 	}
@@ -135,10 +140,10 @@ public class Gameboard {
 		yDiceCup.resetDices();
 
 	}
-	
+
 	public void resetLabels() {
 		for (int i = 0; i < yView.pointlabels.length; i++) {
-			yView.pointlabels[i].setText(" "); 
+			yView.pointlabels[i].setText(" ");
 		}
 		for (int i = 0; i < yView.dicelabels.length; i++) {
 			yView.dicelabels[i].setText(" ");
@@ -147,7 +152,7 @@ public class Gameboard {
 	}
 
 	public void resetFields() {
-		for (int i = 0; i < yView.pointsfields.length; i++) { 
+		for (int i = 0; i < yView.pointsfields.length; i++) {
 			yView.pointsfields[i].setText(" ");
 		}
 	}
@@ -159,7 +164,7 @@ public class Gameboard {
 	}
 
 	public void resetButtons() {
-		for (int i = 0; i < yView.pointbuttons.length; i++) { 
+		for (int i = 0; i < yView.pointbuttons.length; i++) {
 			yView.pointbuttons[i].setDisable(false);
 		}
 	}

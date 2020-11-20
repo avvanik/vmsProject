@@ -67,7 +67,7 @@ public class Gameboard {
 		if (event.getSource() == yView.totalButton) {
 			yView.rollButton.setDisable(true);
 			yView.totalField.setText(" " + yScores.calculateTotal());
-			yScores.clearResultList();
+			yScores.ResultList.clear();
 		}
 	}
 	
@@ -103,7 +103,7 @@ public class Gameboard {
 	private void handlePoints(Button pointbuttons, int points, TextField pointsfields, ArrayList<Integer> resultlist) {
 		pointbuttons.setDisable(true);
 		pointsfields.setText(" " + points);
-		yScores.addValueToResultList(points);
+		yScores.ResultList.add(points);
 		yView.rollButton.setDisable(false);
 	}
 
@@ -119,7 +119,7 @@ public class Gameboard {
 		yView.rollButton.setDisable(false);
 		yDiceCup.resetRounds();
 		yScores.resetPoints();
-		yScores.clearResultList();
+		yScores.ResultList.clear();
 		resetButtons();
 		resetFields();
 		resetLabels();

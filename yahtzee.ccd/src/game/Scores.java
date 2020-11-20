@@ -52,14 +52,6 @@ public class Scores {
 		}
 		return total;
 	}
-
-	public void clearResultList() {
-			ResultList.clear();
-	}
-	
-	public void addValueToResultList(Integer value) {
-		ResultList.add(value);
-	}
 	
 	public void resetPoints() {
 		ones=0;

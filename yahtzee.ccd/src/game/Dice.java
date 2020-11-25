@@ -10,8 +10,10 @@ public class Dice {
 	public void reset() {
 		this.value=0;
 	}
+	
 	public int getValue() {
 		return value;
 	}
+	
 
 }

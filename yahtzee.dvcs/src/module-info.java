@@ -1,0 +1,2 @@
+module yahtzee.dvcs {
+}

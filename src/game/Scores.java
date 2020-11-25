@@ -61,4 +61,5 @@ public class Scores {
 		total=0;	
 	}
 
+	
 }

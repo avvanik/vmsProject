@@ -14,7 +14,5 @@ public class Dice {
 	public int getValue() {
 		return value;
 	}
-	
-	//TODO test
 
 }

@@ -15,5 +15,6 @@ public class Dice {
 		return value;
 	}
 	
+	//TODO test
 
 }

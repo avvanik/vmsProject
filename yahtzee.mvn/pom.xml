@@ -27,8 +27,8 @@
   
 <distributionManagement>
     <repository>
-        <id>releases</id>
-        <url>http://domain:port/content/repositories/releases</url>
+        <id>yahtzee.mvn</id>
+        <url>https://github.com/avvanik/vmsProject/tree/master/yahtzee.mvn</url>
     </repository>
 </distributionManagement>
   

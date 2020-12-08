@@ -27,8 +27,8 @@
   
 <distributionManagement>
     <repository>
-        <id>my-internal-site</id>
-        <url>http://myserver/repo</url>
+        <id>central</id>
+        <url>https://repo.maven.apache.org/maven2/</url>
     </repository>
 </distributionManagement>
   

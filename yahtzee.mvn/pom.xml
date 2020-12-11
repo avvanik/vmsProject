@@ -25,6 +25,12 @@
     </plugins>
   </build>
   
-
+    <distributionManagement>
+    <repository>
+        <id>central</id>
+        <name>centralMavenRepository</name>
+        <url>https://repo.maven.apache.org/maven2/maven/maven/1.1.javadoc/</url>
+    </repository>
+</distributionManagement>
   
 </project>

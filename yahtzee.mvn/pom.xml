@@ -25,4 +25,12 @@
     </plugins>
   </build>
   
+    <distributionManagement>
+    <repository>
+        <id>central</id>
+        <name>Central Repository</name>
+        <url>https://repo.maven.apache.org/maven2/maven/maven-archetype-quickstart/</url>
+    </repository>
+</distributionManagement>
+  
 </project>
